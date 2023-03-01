@@ -27,13 +27,13 @@ This git is part of  instructions available on https://w3.ibm.com/w3publisher/pr
 
 #### 6. Muito importante: Setar estas variáveis / Must important! Define project name and set your IBM Entitlement Key
 > PROJECT=turbomonic<br>
-> IBMENTITLEMENTKEY=???<br>
+> CHANNEL=???<br>
 > echo $PROJECT<br>
-> echo $IBMENTITLEMENTKEY
+> echo $CHANNEL
 
 #### 7. Ajustar o arquivo com Projeto/EntitlementKey / Run the command below to adjust Project and EntitlementKey
 > cat /root/turbonomic/t8c-certified-sub.yaml | sed "s/{###PROVIDE_YOUR_PROJECT_NAMESPACE_CP4X_HERE###}/$PROJECT/g" >/root/turbonomic/t8c-certified-sub_OK.yaml<br>
-> cat /root/turbonomic/t8c-certified-operator.yaml | sed "s/{###PROVIDE_YOUR_PROJECT_NAMESPACE_CP4X_HERE###}/$PROJECT/g" >/root/turbonomic/t8c-certified-operator_OK.yaml
+> cat /root/turbonomic/t8c-certified-operator.yaml | sed "s/{###PROVIDE_YOUR_PROJECT_NAMESPACE_CP4X_HERE###}/$PROJECT/g" | {###PROVIDE_CHANNEL_OPERATOR_HERE###} >/root/turbonomic/t8c-certified-operator_OK.yaml
 
 #### 8. Execute o script / And finally, run the script
 > oc apply -f /root/turbonomic/t8c-certified-operator_OK.yaml<br>
