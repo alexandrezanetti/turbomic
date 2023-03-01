@@ -40,6 +40,8 @@ This git is part of  instructions available on https://w3.ibm.com/w3publisher/pr
 > oc apply -f /root/turbonomic/t8c-certified-sub_OK.yaml
 
 #### 9. E finalmente, acompanhe o pod ser restatado
-oc get pods -n openshift-marketplace -w | grep operators
+> oc get pods -n openshift-marketplace -w | grep operators
 
-
+#### Informação complementar / Addicional information
+#Como descobrir os operadores / How to discover the operators:
+> oc get packagemanifests --all-namespaces | grep t8c | grep "Certified
