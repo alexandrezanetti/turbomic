@@ -44,4 +44,4 @@ This git is part of  instructions available on https://w3.ibm.com/w3publisher/pr
 
 #### Informação complementar / Addicional information
 - Como descobrir os operadores / How to discover the operators:
-> oc get packagemanifests --all-namespaces | grep t8c | grep "Certified
+> oc get packagemanifests --all-namespaces | grep t8c | grep "Certified"
